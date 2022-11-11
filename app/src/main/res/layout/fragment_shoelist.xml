@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ShoelistFragment">
+
+    <data>
+        <variable
+            name="shoeModel"
+            type="com.udacity.shoestore.models.Shoe" />
+    </data>
+
+    <!-- constraint layout was used to maintain relation between
+   different controls on diffrent resolutiond-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/shoelist_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addshoe_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="15dp"
+            android:clickable="true"
+            android:src="@drawable/ic_add"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ScrollView
+            android:id="@+id/shoelist_scrollview"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/addshoe_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!-- linear layout was used as it's more suitable for the
+            dynamically adding of controls at run time as i don't adjust
+            their relatios beforehand-->
+
+            <LinearLayout
+                android:id="@+id/shoelist_linearlayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

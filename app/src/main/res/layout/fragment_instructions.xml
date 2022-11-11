@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".InstructionsFragment">
+
+    <!-- constraint layout was used to maintain relation between
+    different controls on diffrent resolutiond-->
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/instructions_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        android:id="@+id/instructions_title_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/instructions_title_string"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/title_size"
+        app:layout_constraintBottom_toTopOf="@+id/instructions_content_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.53"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/instructions_content_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:text="@string/instructions_content_string"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/content_size"
+        app:layout_constraintBottom_toTopOf="@+id/shoelist_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instructions_title_view" />
+
+    <Button
+        android:id="@+id/shoelist_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:text="@string/shoelist_string"
+        android:theme="@style/ButtonStyle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

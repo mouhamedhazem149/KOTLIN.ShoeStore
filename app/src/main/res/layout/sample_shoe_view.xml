@@ -1,0 +1,85 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="shoeModel"
+            type="com.udacity.shoestore.models.Shoe" />
+    </data>
+
+    <!-- constraint layout was used to maintain relation between
+   different controls on diffrent resolutiond-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/shoe_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/shoeview_image3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:baselineAligned="false"
+            app:layout_constraintBottom_toTopOf="@+id/shoeview_name_text3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_launcher_background" />
+
+        <TextView
+            android:id="@+id/shoeview_name_text3"
+            android:text="@{@string/name_format(shoeModel.name)}"
+            app:layout_constraintBottom_toTopOf="@+id/shoeview_company_text3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shoeview_image3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:ems="10"
+            android:textSize="@dimen/content_size"/>
+
+        <TextView
+            android:id="@+id/shoeview_size_text3"
+            android:text="@{@string/size_format(shoeModel.size)}"
+            app:layout_constraintBottom_toTopOf="@+id/shoeview_description_text3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shoeview_company_text3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:ems="10"
+            android:textSize="@dimen/content_size" />
+
+        <TextView
+            android:id="@+id/shoeview_company_text3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="center_horizontal"
+            android:text="@{@string/company_format(shoeModel.company)}"
+            android:textSize="@dimen/content_size"
+            app:layout_constraintBottom_toTopOf="@+id/shoeview_size_text3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shoeview_name_text3" />
+
+        <TextView
+            android:id="@+id/shoeview_description_text3"
+            android:text="@{@string/description_format(shoeModel.description)}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shoeview_size_text3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:ems="10"
+            android:textSize="@dimen/content_size" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

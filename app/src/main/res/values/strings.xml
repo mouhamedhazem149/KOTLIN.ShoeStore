@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">ShoeStore</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="email_string">Email :</string>
+    <string name="password_string">Password :</string>
+    <string name="login_string">Login</string>
+    <string name="register_string">Create new account</string>
+    <string name="welcome_title_string">\t Welcome to the shoe store Onboarding Page !</string>
+    <string name="welcome_content_string">\t This is the welcome page for the shoe store inventory app ! we hope you will enjoy your journey in our store.\n \n You will find below a button to go to the instructions page to have some helpful tips in your journey :)</string>
+    <string name="instructions_string">Instructions</string>
+    <string name="shoestore_string">Shoe Store</string>
+    <string name="save_string">Save Shoe</string>
+    <string name="cancel_string">Cancel</string>
+    <string name="shoename_string">Shoe Name :</string>
+    <string name="company_string">Company :</string>
+    <string name="shoesize_string">Shoe Size :</string>
+    <string name="description_text">Description :</string>
+    <string name="logout_string">Log out</string>
+    <string name="name_format">Name: %s</string>
+    <string name="size_format">Shoe size: %.2f</string>
+    <string name="company_format">Company: %s</string>
+    <string name="description_format">Description: %s</string>
+    <string name="nest_string">Next</string>
+    <string name="shoelist_string">Shoelist Page</string>
+    <string name="instructions_title_string">\t Welcome to the shoe store Instructions page!</string>
+    <string name="instructions_content_string">\t The app consists of just 5 views for simplicity, you have alreay seen the login and welcome views, and this is the instruction view, the other 2 are the shoe list and shoe detail views \n \n The shoe list view contains a list of all the shoes we have and for the shoe detail view, you can use it to add a new shoe \n \n You can reach the shoe list view using the navigation button below ,and for the shoe detail page you can reach by clicking the pink "+" button you will see in the shoe list view \n \n Hope you will have a nice time :) </string>
+</resources>
