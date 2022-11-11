@@ -31,11 +31,11 @@ class ShoelistFragment : Fragment() {
             false
         )
 
-        if (arguments != null) {
-            var args = ShoelistFragmentArgs.fromBundle(arguments!!)
-            if (args.addedShoe != null)
-                viewModel.AddShoe(args.addedShoe!!)
-        }
+//        if (arguments != null) {
+//            var args = ShoelistFragmentArgs.fromBundle(arguments!!)
+//            if (args.addedShoe != null)
+//                viewModel.AddShoe(args.addedShoe!!)
+//        }
 
         binding.addshoeButton.setOnClickListener {
             findNavController().navigate(ShoelistFragmentDirections.actionShoelistFragmentToShoedetailFragment())
