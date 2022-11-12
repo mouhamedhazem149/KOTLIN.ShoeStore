@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
 
         val binding : ActivityMainBinding = DataBindingUtil.setContentView(this,R.layout.activity_main)
 
-        setSupportActionBar(findViewById(R.id.toolbar))
+        setSupportActionBar(binding.toolbar)
 
         Timber.plant(Timber.DebugTree())
     }
